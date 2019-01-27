@@ -40,7 +40,7 @@
 - 查询文件夹的磁盘空间限额和文件数目限额：`hadoop fs -count -q /tmp`
 
 
-# Java实现
+# Java API
 ## 使用FileSystem访问HDFS文件系统和本地文件系统(`get/getLocal`)
 我们可以在Hadoop中使用FileSystem API来打开一个文件的输入流，然后我们可以对文件进行各种的操作实现。Configuration 对象封装了客户端或服务器的配置，通过设置配置文件读取类路径来实现。
 ```java
