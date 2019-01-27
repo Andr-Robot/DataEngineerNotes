@@ -1,5 +1,3 @@
-[toc]
-
 # HBase 压缩策略
 Compaction会从一个region的一个store中选择一些hfile文件进行合并。合并说来原理很简单，先从这些待合并的数据文件中读出KeyValues，再按照由小到大排列后写入一个新的文件中。之后，这个新生成的文件就会取代之前待合并的所有文件对外提供服务。HBase根据合并规模将Compaction分为了两类：**Minor Compaction和Major Compaction**：
 - Minor Compaction：根据配置策略，自动检查小文件，合并到大文件，从而减少碎片文件，然而并不会立马删除掉旧 HFile 文件。    

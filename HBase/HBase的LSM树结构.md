@@ -1,4 +1,3 @@
-
 参见[[HBase] LSM树 VS B+树](https://blog.csdn.net/dbanote/article/details/8897599)、[LSM树由来、设计思想以及应用到HBase的索引](https://www.cnblogs.com/yanghuahui/p/3483754.html)和[LSM树的不同实现介绍](https://juejin.im/post/5a58542b6fb9a01c9064ce44)     
 
 ![LSM](https://raw.githubusercontent.com/Andr-Robot/iMarkdownPhotos/master/Res/LSM.jpg)

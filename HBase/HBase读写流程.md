@@ -1,5 +1,3 @@
-[toc]
-
 ![read and write](https://raw.githubusercontent.com/Andr-Robot/iMarkdownPhotos/master/Res/hbasereadandwrite.png)
 
 # WAL机制

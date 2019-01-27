@@ -1,5 +1,3 @@
-[toc]
-
 参见：
 - [HBase原理 – 所有Region切分的细节都在这里了](http://hbasefly.com/2017/08/27/hbase-split/)
 - [Hadoop HBase中split原理学习](http://forlan.iteye.com/blog/2374049)
