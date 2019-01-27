@@ -1,6 +1,6 @@
 <!-- GFM-TOC -->
 * [常用命令](#常用命令)
-* [Java API](#Java API)
+* [Java实现](#Java实现)
     * [创建文件(`create`)](#创建文件(`create`))
     * [创建目录(`mkdirs`)](#创建目录(`mkdirs`))
     * [检查目录或文件是否存在(`exists`)](#检查目录或文件是否存在(`exists`))
@@ -39,7 +39,7 @@
 - 查询文件夹的磁盘空间限额和文件数目限额：`hadoop fs -count -q /tmp`
 
 
-# Java API
+# Java实现
 ## 使用FileSystem访问HDFS文件系统和本地文件系统(`get/getLocal`)
 我们可以在Hadoop中使用FileSystem API来打开一个文件的输入流，然后我们可以对文件进行各种的操作实现。Configuration 对象封装了客户端或服务器的配置，通过设置配置文件读取类路径来实现。
 ```java
