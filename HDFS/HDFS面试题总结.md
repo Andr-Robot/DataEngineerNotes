@@ -1,3 +1,4 @@
+<!-- GFM-TOC -->
 * [HDFS读写流程](# HDFS读写流程)
 * [namenode宕机怎么处理](# namenode宕机怎么处理)
 * [HDFS查看压缩文件中的内容](# HDFS查看压缩文件中的内容)
@@ -14,6 +15,7 @@
         * [hadoop fs -count -q](# hadoop fs -count -q)
 * [HDFS查看文件的前几行、后几行和行数](# HDFS查看文件的前几行、后几行和行数)
 * [hdfs create一个文件的流程](# hdfs create一个文件的流程)
+<!-- GFM-TOC -->
 
 
 # HDFS读写流程

@@ -1,6 +1,7 @@
 * [HDFS架构](# HDFS架构)
 * [HDFS写数据流程](# HDFS写数据流程)
 * [HDFS读数据流程](# HDFS读数据流程)
+<!-- GFM-TOC -->
 * [DataNode工作机制](# DataNode工作机制)
 * [HDFS的特点](# HDFS的特点)
     * [优点](# 优点)
@@ -12,7 +13,7 @@
     * [NameNode](# NameNode)
     * [Secondary NameNode](# Secondary NameNode)
 * [参考文献](# 参考文献)
-
+<!-- GFM-TOC -->
 
 Hadoop分布式文件系统(HDFS)是分布式计算中数据存储管理的基础。它和现有的分布式文件系统有很多共同点。但同时，它和其他的分布式文件系统的区别也是很明显的。HDFS是一个**高度容错性**的系统，适合部署在廉价的机器上。HDFS能提供高吞吐量的数据访问，非常适合大规模数据集上的应用。   
 

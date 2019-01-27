@@ -1,3 +1,4 @@
+<!-- GFM-TOC -->
 * [常用命令](# 常用命令)
 * [Java API](# Java API)
     * [创建文件(`create`)](# 创建文件(`create`))
@@ -7,6 +8,7 @@
     * [查看目录下文件和目录列表(`listStatus`)](# 查看目录下文件和目录列表(`listStatus`))
     * [将本地文件写入到HDFS中(`copyBytes`)](# 将本地文件写入到HDFS中(`copyBytes`))
 * [参考文献](# 参考文献)
+<!-- GFM-TOC -->
 
 # 常用命令
 **命令基本格式:** `hadoop fs -cmd < args >`
