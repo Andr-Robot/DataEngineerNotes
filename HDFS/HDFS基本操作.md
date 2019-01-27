@@ -1,13 +1,13 @@
 <!-- GFM-TOC -->
-* [常用命令](# 常用命令)
-* [Java API](# Java API)
-    * [创建文件(`create`)](# 创建文件(`create`))
-    * [创建目录(`mkdirs`)](# 创建目录(`mkdirs`))
-    * [检查目录或文件是否存在(`exists`)](# 检查目录或文件是否存在(`exists`))
-    * [查看文件系统中文件元数据(`getFileStatus`)](# 查看文件系统中文件元数据(`getFileStatus`))
-    * [查看目录下文件和目录列表(`listStatus`)](# 查看目录下文件和目录列表(`listStatus`))
-    * [将本地文件写入到HDFS中(`copyBytes`)](# 将本地文件写入到HDFS中(`copyBytes`))
-* [参考文献](# 参考文献)
+* [常用命令](#常用命令)
+* [Java API](#Java API)
+    * [创建文件(`create`)](#创建文件(`create`))
+    * [创建目录(`mkdirs`)](#创建目录(`mkdirs`))
+    * [检查目录或文件是否存在(`exists`)](#检查目录或文件是否存在(`exists`))
+    * [查看文件系统中文件元数据(`getFileStatus`)](#查看文件系统中文件元数据(`getFileStatus`))
+    * [查看目录下文件和目录列表(`listStatus`)](#查看目录下文件和目录列表(`listStatus`))
+    * [将本地文件写入到HDFS中(`copyBytes`)](#将本地文件写入到HDFS中(`copyBytes`))
+* [参考文献](#参考文献)
 <!-- GFM-TOC -->
 
 # 常用命令
