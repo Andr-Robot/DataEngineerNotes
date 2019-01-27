@@ -1,0 +1,29 @@
+参见[HBase----热点问题以及解决方案](https://starmake.github.io/2018/04/23/Hbase/HBase%E7%83%AD%E7%82%B9%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/)   
+
+# 什么是热点
+热点发生在大量的client直接访问集群的一个或极少数个节点(访问可能是读，写或者其他操作)。 大量访问会使热点region所在的单个机器超出自身承受能力，引起性能下降甚至region不可用，这 也会影响同一个RegionServer上的其他region，由于主机无法服务其他region的请求。
+
+# 产生原因
+1. Hbase 创建表默认只有一个分区
+2. Rowkey 设计不合理
+
+# 解决方案
+1. Hbase 创建表时指定分区
+2. 合理设计Rowkey
+
+# Hbase 常见避免热点问题方法
+## 加盐
+在rowkey的前面增加随机数。具体就是给rowkey分配一个随机前缀以使得它和之前排序不同。分配的前缀种类数量应该和你想使数据分散到不同的region的数量一致。加盐之后的rowkey就会根据随机生成的前缀分散到各个region上，以避免热点。    
+
+因为分配是随机的，所以如果你想要以字典序取回数据，你需要做更多工作。加盐这种方式增加了写时的吞吐量，但是当读时有了额外代价。   
+
+## 哈希
+除了加盐，你也可以使用哈希，哈希会使同一行永远用同一个前缀加盐。哈希也可以使负载分散到整个集群，但是读却是可以预测的。使用确定的哈希可以让客户端重构完成的 rowkey，使用Get 操作获取正常的获取某一行数据。
+
+## 翻转key
+第三种防止热点的方法是**翻转固定长度或者数字格式的rowkey**。这样可以使得rowkey中经常改变的部分（最没意义的部分）放在前面。这样可以有效的随机 rowkey,但是牺牲了 rowkey 的有序性。
+
+# 参考文献
+[HBase Rowkey设计](https://blog.bcmeng.com/post/hbase-rowkey.html#%E7%83%AD%E7%82%B9)    
+[HBase的RowKey设计](http://dxer.github.io/2016/06/16/hbase_rowkey/)
+[HBase----热点问题以及解决方案](https://starmake.github.io/2018/04/23/Hbase/HBase%E7%83%AD%E7%82%B9%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/)   
