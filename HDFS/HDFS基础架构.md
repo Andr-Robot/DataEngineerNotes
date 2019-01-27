@@ -9,9 +9,9 @@
 * [HDFS数据存放和健壮性](#HDFS数据存放和健壮性)
     * [HDFS副本](#HDFS副本)
     * [HDFS数据的健壮性](#HDFS数据的健壮性)
-* [Secondary NameNode](#Secondary NameNode)
+* [Secondary NameNode](#SecondaryNameNode)
     * [NameNode](#NameNode)
-    * [Secondary NameNode](#Secondary NameNode)
+    * [Secondary NameNode](#SecondaryNameNode)
 * [参考文献](#参考文献)
 <!-- GFM-TOC -->
 
