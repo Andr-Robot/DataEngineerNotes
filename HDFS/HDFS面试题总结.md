@@ -1,20 +1,20 @@
 <!-- GFM-TOC -->
-* [HDFS读写流程](# HDFS读写流程)
-* [namenode宕机怎么处理](# namenode宕机怎么处理)
-* [HDFS查看压缩文件中的内容](# HDFS查看压缩文件中的内容)
-    * [lzo文件(先按照lzop命令)](# lzo文件(先按照lzop命令))
-    * [gz压缩](# gz压缩)
-    * [-cat 在终端显示文件内容](# -cat 在终端显示文件内容)
-    * [-text](# -text)
-* [查看HDFS文件夹下文件或文件夹的大小](# 查看HDFS文件夹下文件或文件夹的大小)
-    * [-count 列出文件夹数量、文件数量、内容大小](# -count 列出文件夹数量、文件数量、内容大小)
-    * [-du 显示文件大小](# -du 显示文件大小)
-    * [理解hadoop fsck、fs -dus、-count -q的大小输出](# 理解hadoop fsck、fs -dus、-count -q的大小输出)
-        * [为什么逻辑空间一般不等于物理空间？](# 为什么逻辑空间一般不等于物理空间？)
-        * [hadoop fsck和hadoop fs -dus](# hadoop fsck和hadoop fs -dus)
-        * [hadoop fs -count -q](# hadoop fs -count -q)
-* [HDFS查看文件的前几行、后几行和行数](# HDFS查看文件的前几行、后几行和行数)
-* [hdfs create一个文件的流程](# hdfs create一个文件的流程)
+* [HDFS读写流程](#HDFS读写流程)
+* [namenode宕机怎么处理](#namenode宕机怎么处理)
+* [HDFS查看压缩文件中的内容](#HDFS查看压缩文件中的内容)
+    * [lzo文件(先按照lzop命令)](#lzo文件(先按照lzop命令))
+    * [gz压缩](#gz压缩)
+    * [-cat在终端显示文件内容](#-cat在终端显示文件内容)
+    * [-text](#-text)
+* [查看HDFS文件夹下文件或文件夹的大小](#查看HDFS文件夹下文件或文件夹的大小)
+    * [-count列出文件夹数量、文件数量、内容大小](#-count列出文件夹数量、文件数量、内容大小)
+    * [-du显示文件大小](#-du显示文件大小)
+    * [理解hadoop fsck、fs -dus、-count -q的大小输出](#理解hadoop fsck、fs -dus、-count -q的大小输出)
+        * [为什么逻辑空间一般不等于物理空间？](#为什么逻辑空间一般不等于物理空间？)
+        * [hadoop fsck和hadoop fs -dus](#hadoop fsck和hadoop fs -dus)
+        * [hadoop fs -count -q](#hadoop fs -count -q)
+* [HDFS查看文件的前几行、后几行和行数](#HDFS查看文件的前几行、后几行和行数)
+* [hdfs create一个文件的流程](#hdfs create一个文件的流程)
 <!-- GFM-TOC -->
 
 
@@ -49,7 +49,7 @@ hadoop fs -cat /tmp/temp.txt.gz | zcat
 -text	-text	查看文件或者 zip 的内容	hadoop fs -text /input/abc.txt
 ```
 
-## -cat 在终端显示文件内容
+## -cat在终端显示文件内容
 
 ```
 hdfs dfs -cat /two.txt
@@ -81,13 +81,13 @@ hadoop fs -du hdfs://172.16.0.226:8020/test/sys_dict/ | sort -nr | head -n 1
 -dus	-dus <路径>	汇总统计目录下文件和文件夹的大小	hadoop fs -du /
 ```
 
-## -count 列出文件夹数量、文件数量、内容大小
+## -count列出文件夹数量、文件数量、内容大小
 
 ```
 hdfs dfs -count -q /
 ```
 
-## -du 显示文件大小
+## -du显示文件大小
 
 ```
 hdfs dfs -du /input #列出指定目录下面每个文件大小
