@@ -1,6 +1,11 @@
+* [Memstore概述](#memstore概述)
+* [Memstore Flush触发条件](#memstore-flush触发条件)
+* [Memstore Flush流程](#memstore-flush流程)
+
+
 参见[HBase – Memstore Flush深度解析](http://hbasefly.com/2016/03/23/hbase-memstore-flush/)    
 
-# Memstore 概述
+# Memstore概述
 HBase中，Region是集群节点上最小的数据服务单元，用户数据表由一个或多个Region组成。在Region中每个ColumnFamily的数据组成一个Store。每个Store由一个Memstore和多个HFile组成，如下图所示：
 
 ![](https://raw.githubusercontent.com/Andr-Robot/iMarkdownPhotos/master/Res/region.png)
