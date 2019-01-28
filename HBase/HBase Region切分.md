@@ -1,3 +1,16 @@
+* [Region切分触发策略](#region切分触发策略)
+* [寻找SplitPoint](#寻找splitpoint)
+* [Region核心切分流程](#region核心切分流程)
+  * [prepare阶段](#prepare阶段)
+  * [execute阶段](#execute阶段)
+  * [rollback阶段](#rollback阶段)
+* [reference文件](#reference文件)
+* [总结](#总结)
+  * [通过reference文件如何查找数据？](#通过reference文件如何查找数据)
+  * [父region的数据什么时候会迁移到子region目录？](#父region的数据什么时候会迁移到子region目录)
+  * [父region什么时候会被删除？](#父region什么时候会被删除)
+
+
 参见：
 - [HBase原理 – 所有Region切分的细节都在这里了](http://hbasefly.com/2017/08/27/hbase-split/)
 - [Hadoop HBase中split原理学习](http://forlan.iteye.com/blog/2374049)
