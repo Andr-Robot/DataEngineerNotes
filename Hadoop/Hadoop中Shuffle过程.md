@@ -3,7 +3,7 @@
     * [执行过程](#执行过程)
         * [map端](#map端)
             * [Partioner](#partioner)
-            * [spill（溢写）：sort & combiner](#)
+            * [spill（溢写）：sort & combiner](#spill溢写sort--combiner)
             * [merge](#merge)
         * [reduce端](#reduce端)
             * [copy](#copy)
