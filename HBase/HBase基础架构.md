@@ -1,3 +1,24 @@
+* [HBase是什么](#hbase是什么)
+* [HBase的特点](#hbase的特点)
+* [HBase的数据模型](#hbase的数据模型)
+    * [概念视图](#概念视图)
+    * [物理视图](#物理视图)
+* [HBase架构及基本组件](#hbase架构及基本组件)
+    * [Client](#client)
+    * [HMaster](#hmaster)
+    * [HRegionServer](#hregionserver)
+    * [HRegion的管理](#hregion的管理)
+    * [HStore](#hstore)
+    * [ZooKeeper集群](#zookeeper集群)
+    * [HLog](#hlog)
+* [Region定位](#region定位)
+* [-ROOT- 表与 .META. 表](#-root--表与-meta-表)
+    * [-ROOT- 表](#-root--表)
+    * [.META. 表](#meta-表)
+* [何时使用Hbase](#何时使用hbase)
+* [墓碑标记](#墓碑标记)
+* [参考文献](#参考文献)
+
 # HBase是什么
 HBase 是一个高可靠、高性能、**面向列**、可伸缩的**分布式存储系统**，利用Hbase技术可在廉价PC Server上搭建 大规模**结构化存储**集群。   
 HBase 利用Hadoop HDFS 作为其文件存储系统,利用Hadoop MapReduce来处理HBase中的海量数据,利用Zookeeper作为其分布式协同服务。**主要用来存储非结构化和半结构化的松散数据（列存NoSQL数据库）**。

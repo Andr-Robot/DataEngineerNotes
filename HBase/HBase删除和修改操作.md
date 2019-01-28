@@ -1,3 +1,9 @@
+* [HBase源码分析之KeyValue](#hbase源码分析之keyvalue)
+* [删除数据](#删除数据)
+* [更新数据](#更新数据)
+* [总结](#总结)
+
+
 # HBase源码分析之KeyValue
 参见[HBase源码分析之KeyValue](https://blog.csdn.net/lipeng_bigdata/article/details/51013502)和[HBase的基础类型KeyValue](http://yangbolin.cn/2014/07/20/hbase-keyvalue-type/)    
 HBase是**面向列的存储数据**的，最终的存储单元都是**KeyValue**的结构，HBase本身也定义了一个KeyValue的类型，**这是HBase数据存储的基本类型**。   

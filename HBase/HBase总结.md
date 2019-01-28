@@ -1,3 +1,9 @@
+* [HBase和Hive的区别](#hbase和hive的区别)
+* [HBase优缺点](#hbase优缺点)
+* [NoSQL和关系数据库的区别](#nosql和关系数据库的区别)
+* [HBase和传统数据库的区别](#hbase和传统数据库的区别)
+* [HBase的应用场景](#hbase的应用场景)
+
 # HBase和Hive的区别
 - **Hbase 是数据库，是有实体表的，列式存储，基于Nosql方式查询**。
 - **Hive 的目的不是存储或查询，可以认为它本身就没有实体表，只是HDFS上是结构化文件的视图**。Hive 一般用于ETL，Hive的SQL本身就可以转化为MapReduce。所以使用Hive目的，就是方便实现MapReduce程序来做一些ETL的工作。
