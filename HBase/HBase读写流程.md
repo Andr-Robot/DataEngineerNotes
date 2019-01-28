@@ -1,3 +1,9 @@
+* [WAL机制](#wal机制)
+* [写流程](#写流程)
+* [读数据](#读数据)
+* [HBase随机读写性能](#hbase随机读写性能)
+* [参考文献](#参考文献)
+
 ![read and write](https://raw.githubusercontent.com/Andr-Robot/iMarkdownPhotos/master/Res/hbasereadandwrite.png)
 
 # WAL机制

@@ -1,3 +1,18 @@
+* [HBase什么时候触发HFile的合并操作，为什么需要合并HFile](#hbase什么时候触发hfile的合并操作为什么需要合并hfile)
+* [HBase读写流程](#hbase读写流程)
+* [HBase如何保证数据一致性](#hbase如何保证数据一致性)
+* [HRegionServer宕机怎么处理](#hregionserver宕机怎么处理)
+* [HRegionServer宕机回滚时如果有写数据怎么办](#hregionserver宕机回滚时如果有写数据怎么办)
+* [读blockcache时，如果有删除数据进memstore，怎么保证一致性](#读blockcache时如果有删除数据进memstore怎么保证一致性)
+* [memstore多大刷盘](#memstore多大刷盘)
+* [小文件怎么合并](#小文件怎么合并)
+* [HBase怎么删除数据](#hbase怎么删除数据)
+* [常说HBase数据读取要读Memstore、HFile和Blockcache，为什么上面Scanner只有StoreFileScanner和MemstoreScanner两种？没有BlockcacheScanner?](#常说hbase数据读取要读memstorehfile和blockcache为什么上面scanner只有storefilescanner和memstorescanner两种没有blockcachescanner)
+* [数据更新操作先将数据写入Memstore，再落盘。落盘之后需不需要更新Blockcache中对应的kv？如果不更新，会不会读到脏数据？](#数据更新操作先将数据写入memstore再落盘落盘之后需不需要更新blockcache中对应的kv如果不更新会不会读到脏数据)
+* [当使用get tablename rowkey的时候，在memstore查询到一条刚刚put的记录后，还会去hregion中继续查找其他timestamp对应的数据吗？](#当使用get-tablename-rowkey的时候在memstore查询到一条刚刚put的记录后还会去hregion中继续查找其他timestamp对应的数据吗)
+* [HBase中HRegion的分裂](#hbase中hregion的分裂)
+
+
 # HBase什么时候触发HFile的合并操作，为什么需要合并HFile
 当**文件达到一定数量（默认3）** 就会**触发Compact操作**，将多个HFile合并成一个的HFile文件，**同时进行版本合并和数据删除**。     
 为了**优化读过程**，因为小文件较多，合并成一个文件，方便更快的读。

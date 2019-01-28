@@ -1,3 +1,15 @@
+* [HFile中的Block](#hfile中的block)
+* [BloomFilter(布隆过滤器)](#bloomfilter布隆过滤器)
+    * [主要功能](#主要功能)
+    * [原理](#原理)
+    * [存储开销](#存储开销)
+    * [控制粒度](#控制粒度)
+        * [ROW](#row)
+        * [ROWCOL](#rowcol)
+    * [常用场景](#常用场景)
+* [参考文献](#参考文献)
+
+
 #  HFile中的Block
 ![HFile Block](https://raw.githubusercontent.com/Andr-Robot/iMarkdownPhotos/master/Res/HFilePhy.png)   
 
