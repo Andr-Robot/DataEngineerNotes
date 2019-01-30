@@ -1,6 +1,13 @@
-[toc]
+* [导致数据倾斜的操作](#导致数据倾斜的操作)
+* [调节参数](#调节参数)
+* [SQL语句调节](#sql语句调节)
+* [总结](#总结)
+    * [使用COUNT DISTINCT和GROUP BY造成的数据倾斜](#使用count-distinct和group-by造成的数据倾斜)
+    * [使用JOIN引起的数据倾斜](#使用join引起的数据倾斜)
+* [参考文献](#参考文献)
 
-# 导致数据倾斜的操作：
+
+# 导致数据倾斜的操作
 GROUP BY, COUNT DISTINCT, join
 
 # 调节参数

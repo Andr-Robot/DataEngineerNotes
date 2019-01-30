@@ -1,4 +1,14 @@
-[toc]
+* [UDF](#udf)
+* [UDAF](#udaf)
+* [UDTF](#udtf)
+* [部署函数](#部署函数)
+* [Hive常用的函数介绍](#hive常用的函数介绍)
+    * [collect_set和collect_list](#collect_set和collect_list)
+    * [concat和concat_ws](#concat和concat_ws)
+    * [get_json_object](#get_json_object)
+    * [explode](#explode)
+* [参考文献](#参考文献)
+
 
 # UDF
 普通的用户自定义函数。**接受单行输入，并产生单行输出**。继承UDF，重写evaluate方法即可。

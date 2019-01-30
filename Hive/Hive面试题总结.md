@@ -1,4 +1,10 @@
-[toc]
+* [hive sql转化成mr的过程](#hive-sql转化成mr的过程)
+* [数据仓库建模](#数据仓库建模)
+    * [范式模型](#范式模型)
+    * [维度模型](#维度模型)
+* [数据建模，星型模型和雪花模型](#数据建模星型模型和雪花模型)
+* [数仓层级的划分，怎么对接到mysql拿数据](#数仓层级的划分怎么对接到mysql拿数据)
+
 
 # hive sql转化成mr的过程
 参见[HiveSQL解析过程详解](https://www.cnblogs.com/yaojingang/p/5446310.html)和[Hive系列之HSQL转换成MapReduce过程](https://www.jianshu.com/p/660fd157c5eb)

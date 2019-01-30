@@ -1,4 +1,7 @@
-[toc]
+* [列存储和行存储](#列存储和行存储)
+* [Hive中常用的存储格式](#hive中常用的存储格式)
+* [总结](#总结)
+* [参考文献](#参考文献)
 
 # 列存储和行存储
 ![列存储和行存储](https://raw.githubusercontent.com/Andr-Robot/iMarkdownPhotos/master/Res/%E5%88%97%E5%AD%98%E5%82%A8%E5%92%8C%E8%A1%8C%E5%AD%98%E5%82%A8.png)   

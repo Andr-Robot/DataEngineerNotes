@@ -1,4 +1,9 @@
-
+* [Hive Common Join](#hive-common-join)
+    * [Map阶段](#map阶段)
+    * [Shuffle阶段](#shuffle阶段)
+    * [Reduce阶段](#reduce阶段)
+* [Hive Map Join](#hive-map-join)
+* [参考文献](#参考文献)
 
 Hive中的Join可分为：**Common Join（Reduce阶段完成join）** 和 **Map Join（Map阶段完成join）**
 

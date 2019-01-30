@@ -1,4 +1,16 @@
-[toc]
+* [使用分区剪裁、列剪裁](#使用分区剪裁列剪裁)
+* [少用COUNT DISTINCT](少用count-distinct)
+* [是否存在多对多的关联](#是否存在多对多的关联)
+* [JOIN操作](#join操作)
+* [MAP JOIN操作](#map-join操作)
+* [GROUP BY操作](#group-by操作)
+* [合并小文件](#合并小文件)
+* [合理使用Union All](#合理使用union-all)
+* [避免数据倾斜](#避免数据倾斜)
+* [控制map/reduce任务数量](#控制mapreduce任务数量)
+* [压缩数据](#压缩数据)
+* [参考文献](#参考文献)
+
 
 # 使用分区剪裁、列剪裁
 在SELECT中，只拿需要的列，如果有，尽量使用分区过滤，少用SELECT * 。

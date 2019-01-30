@@ -1,4 +1,15 @@
-[toc]
+* [案例分析](#案例分析)
+* [over函数](#over函数)
+* [SUM,AVG,MIN,MAX](#sumavgminmax)
+* [NTILE,ROW_NUMBER,RANK,DENSE_RANK](#ntilerow_numberrankdense_rank)
+    * [NTILE](#ntile)
+    * [ROW_NUMBER](#row_number)
+    * [RANK 和 DENSE_RANK](#rank-和-dense_rank)
+* [CUME_DIST,PERCENT_RANK](#cume_distpercent_rank)
+* [LAG,LEAD,FIRST_VALUE,LAST_VALUE](#lagleadfirst_valuelast_value)
+* [GROUPING SETS,GROUPING__ID,CUBE,ROLLUP](#grouping-setsgrouping__idcuberollup)
+* [参考文献](#参考文献)
+
 
 # 案例分析
 > 使用sql实现计算90分位。有10000个用户，每个用户有一个user_id和对应的交易量统计值cnt。按照交易量从大到小排序，挑选能构成总交易量占比的前90%的用户。
