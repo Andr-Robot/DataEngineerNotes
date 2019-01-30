@@ -1,4 +1,12 @@
-[toc]
+* [方法区](#方法区)
+    * [运行时常量池](#运行时常量池)
+* [JVM堆](#jvm堆)
+* [程序计数器](#程序计数器)
+* [虚拟机栈](#虚拟机栈)
+    * [栈帧(Stack Frame)结构](#栈帧stack-frame结构)
+* [本地方法栈](#本地方法栈)
+* [JDK1.8的一点变化](#jdk18的一点变化)
+* [参考文献](#参考文献)
 
 Java虚拟机在运行程序时会把其自动管理的内存划分为以下几个区域，每个区域都有的用途以及创建销毁的时机。接下来会分别介绍各个区域的功能。    
 ![jvm运行时数据区](https://raw.githubusercontent.com/Andr-Robot/iMarkdownPhotos/master/Res/java-memory.jpg)   

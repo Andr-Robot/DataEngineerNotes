@@ -1,4 +1,23 @@
-[toc]
+* [synchronized的缺陷](#synchronized的缺陷)
+    * [影响执行效率](#影响执行效率)
+    * [无法更好的处理读读操作](#无法更好的处理读读操作)
+    * [无法感知是否成功获得锁](#无法感知是否成功获得锁)
+    * [总结](#总结)
+* [Lock](#lock)
+    * [lock()](#lock-1)
+    * [tryLock()](#trylock)
+    * [tryLock(long time, TimeUnit unit)](#trylocklong-time-timeunit-unit)
+    * [lockInterruptibly()](#lockinterruptibly)
+* [ReentrantLock](#reentrantlock)
+* [ReadWriteLock](#readwritelock)
+* [ReentrantReadWriteLock](#reentrantreadwritelock)
+* [锁的相关概念](#锁的相关概念)
+    * [公平锁/非公平锁](#公平锁非公平锁)
+    * [乐观锁/悲观锁](#乐观锁悲观锁)
+    * [独享锁/共享锁](#独享锁共享锁)
+    * [互斥锁/读写锁](#互斥锁读写锁)
+    * [可重入锁](#可重入锁)
+* [参考文献](#参考文献)
 
 锁——是为了**解决并发操作引起的脏读、数据不一致的问题**。JVM提供了`synchronized`关键字来实现对变量的同步访问以及用`wait`和`notify`来实现线程间通信。在jdk1.5以后，JAVA提供了`Lock`类来实现和`synchronized`一样的功能，并且还提供了`Condition`来显示线程间通信。
 

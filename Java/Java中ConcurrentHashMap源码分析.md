@@ -1,3 +1,14 @@
+* [多线程下HashMap](#多线程下hashmap)
+* [ConcurrentHashMap定义](#concurrenthashmap定义)
+    * [初始化](#初始化)
+    * [Put过程](#put过程)
+    * [Get过程](#get过程)
+    * [并发问题分析](#并发问题分析)
+        * [put 操作的线程安全性](#put-操作的线程安全性)
+        * [remove 操作的线程安全性](#remove-操作的线程安全性)
+* [参考文献](#参考文献)
+
+
 ConcurrentHashMap本质上**是一个Segment数组，而一个Segment实例又包含若干个桶，每个桶中都包含一条由若干个 HashEntry 对象链接起来的链表**。总的来说，ConcurrentHashMap的高效并发机制是通过以下三方面来保证的：
 - 通过锁分段技术保证并发环境下的写操作；
 - 通过 HashEntry的不变性、Volatile变量的内存可见性和加锁重读机制保证高效、安全的读操作；

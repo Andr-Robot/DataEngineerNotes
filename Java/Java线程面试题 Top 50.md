@@ -1,4 +1,10 @@
-[toc]
+* [wait()和sleep()的区别](#wait和sleep的区别)
+* [notify()和notifyAll()的区别](#notify和notifyall的区别)
+* [如何正确地停止一个线程](#如何正确地停止一个线程)
+	* [interrupt()](#interrupt)
+	* [interrupted() 和 isInterrupted()区别](#interrupted-和-isinterrupted区别)
+* [start()和run()的区别](#start和run的区别)
+* [this、Thread.currentThread()和this.currentThread()的区别](#thisthreadcurrentthread和thiscurrentthread的区别)
 
 参见[Java线程面试题 Top 50](http://www.importnew.com/12773.html)    
 

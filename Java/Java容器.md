@@ -1,4 +1,11 @@
-[toc]
+* [HashSet](#hashset)
+* [HashTable](#hashtable)
+* [HashMap](#hashmap)
+* [ConcurrentHashMap](#concurrenthashmap)
+* [LinkedHashMap](#linkedhashmap)
+* [Vector、ArrayList和Linkedlist的区别](#vectorarraylist和linkedlist的区别)
+* [HashTable和HashMap的区别](#hashtable和hashmap的区别)
+* [参考文献](#参考文献)
 
 容器主要包括 Collection 和 Map 两种，Collection 又包含了 List、Set 以及 Queue。详情参见
 [Java 容器——Interview-Notebook](https://github.com/CyC2018/Interview-Notebook/blob/master/notes/Java%20%E5%AE%B9%E5%99%A8.md#map)。

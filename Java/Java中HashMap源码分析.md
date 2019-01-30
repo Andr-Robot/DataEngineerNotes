@@ -1,4 +1,15 @@
-[toc]
+* [HashMap的定义](#hashmap的定义)
+* [HashMap的构造方法](#hashmap的构造方法)
+    * [HashMap()](#hashmap)
+    * [HashMap(int initialCapacity)](#hashmapint-initialcapacity)
+    * [HashMap(int initialCapacity, float loadFactor)](#hashmapint-initialcapacity-float-loadfactor)
+    * [HashMap(Map<? extends K, ? extends V> m)](#hashmapmap-extends-k--extends-v-m)
+* [HashCode()](#hashcode)
+* [HashMap保存数据的过程](#hashmap保存数据的过程)
+* [HashMap读取数据的过程](#hashmap读取数据的过程)
+* [HashMap 的底层数组长度为何总是2的n次方？](#hashmap-的底层数组长度为何总是2的n次方)
+* [参考文献](#参考文献)
+
 
 # HashMap的定义
 

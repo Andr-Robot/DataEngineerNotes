@@ -1,4 +1,17 @@
-[toc]
+* [Comparable](#comparable)
+  * [Comparable 定义](#comparable-定义)
+* [Comparator](#comparator)
+  * [Comparator 定义](#comparator-定义)
+* [Comparator 和 Comparable 相同的地方](#comparator-和-comparable-相同的地方)
+* [Comparator 和 Comparable 不同的地方](#comparator-和-comparable-不同的地方)
+  * [Comparable](#comparable)
+  * [Comparator](#comparator)
+* [Comparator 和 Comparable 的实例](#comparator-和-comparable-的实例)
+  * [Comparable](#comparable)
+  * [Comparator](#comparator)
+* [总结](#总结)
+* [参考文献](#参考文献)
+
 
 # Comparable
 **Comparable 是排序接口。**
@@ -145,5 +158,5 @@ class PersonComparator implements Comparator {
 
 **Comparable相当于“内部比较器”，而Comparator相当于“外部比较器”。**
 
-## 参考文献
+# 参考文献
 [Java 中 Comparable 和 Comparator 比较](http://www.cnblogs.com/skywang12345/p/3324788.html)
