@@ -1,5 +1,5 @@
 * [使用分区剪裁、列剪裁](#使用分区剪裁列剪裁)
-* [少用COUNT DISTINCT](少用count-distinct)
+* [少用COUNT DISTINCT](#少用count-distinct)
 * [是否存在多对多的关联](#是否存在多对多的关联)
 * [JOIN操作](#join操作)
 * [MAP JOIN操作](#map-join操作)
