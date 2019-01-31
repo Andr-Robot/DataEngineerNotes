@@ -9,7 +9,7 @@
     * [HashMap](#hashmap)
     * [TreeMap](#treemap)
     * [总结](#总结)
-    * [参考文献](#参考文献)
+    * [参考文献](#参考文献-1)
 * [java里set，Array和map等容器了解吗，它们的继承关系写一下。](#java里setarray和map等容器了解吗它们的继承关系写一下)
 * [为什么wait和notify在Object方法上？](#为什么wait和notify在object方法上)
 * [String、StringBuffer、StringBuilder的区别](#stringstringbufferstringbuilder的区别)
