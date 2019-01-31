@@ -1,4 +1,12 @@
-[toc]
+* [Spark 持久化](#spark-持久化)
+  * [概述](#概述)
+  * [Cache](#cache)
+  * [Persist](#persist)
+* [Checkpoint](#checkpoint)
+  * [Checkpoint vs Cache](#checkpoint-vs-cache)
+  * [checkpoint 的正确使用姿势](#checkpoint-的正确使用姿势)
+  * [rdd.persist(StorageLevel.DISK_ONLY) vs checkpoint()](#rddpersiststorageleveldisk_only-vs-checkpoint)
+* [参考文献](#参考文献)
 
 # Spark 持久化
 ## 概述

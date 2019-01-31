@@ -1,4 +1,19 @@
-[toc]
+* [Spark算子分类](#spark算子分类)
+* [map和flatmap](#map和flatmap)
+* [mapPartiions](#mappartiions)
+* [groupBy和groupByKey](#groupby和groupbykey)
+* [union、intersection和subtract](#unionintersection和subtract)
+* [sample和takeSample](#sample和takesample)
+* [cache和persist](#cache和persist)
+* [coalesce和repartition](#coalesce和repartition)
+* [partitionBy、mapValues和flatMapValues](#partitionbymapvalues和flatmapvalues)
+* [combineByKey](#combinebykey)
+* [reduce和reduceByKey](#reduce和reducebykey)
+* [take和top](#take和top)
+* [first、count和collect](#firstcount和collect)
+* [countByKey、foreach、foreachPartition和sortBy](#countbykeyforeachforeachpartition和sortby)
+* [aggregate](#aggregate)
+* [参考文献](#参考文献)
 
 # Spark算子分类
 1. Value数据类型的Transformation算子，这种变换不触发提交作业，针对处理的数据项是Value型的数据。

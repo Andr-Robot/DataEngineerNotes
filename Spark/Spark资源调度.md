@@ -1,4 +1,6 @@
-[toc]
+* [DAGScheduler](#dagscheduler)
+* [TaskScheduler](#taskscheduler)
+* [参考文献](#参考文献)
 
 # DAGScheduler
 DAGScheduler把一个Spark作业转换成Stage的DAG（Directed Acyclic Graph有向无环图），根据RDD和Stage之间的关系找出开销最小的调度方法，然后把Stage以TaskSet的形式提交给TaskScheduler，下图展示了DAGScheduler的作用：   

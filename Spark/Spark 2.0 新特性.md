@@ -1,4 +1,6 @@
-[toc]
+* [统一 DataFrame and Dataset API](#统一-dataframe-and-dataset-api)
+* [SparkSession](#sparksession)
+* [参考文献](#参考文献)
 
 Spark 2.0主要聚焦于三个方面：**对标准的SQL支持**、**统一DataFrame和Dataset API**和**提供SparkSession**。下面重点介绍最后两点。
 # 统一 DataFrame and Dataset API

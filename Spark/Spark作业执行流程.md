@@ -1,4 +1,18 @@
-[toc]
+* [Spark运行基本流程](#spark运行基本流程)
+* [启动方式](#启动方式)
+* [基于Standalone的Spark](#基于standalone的spark)
+  * [集群启动流程](#集群启动流程)
+  * [Spark on Standalone运行过程](#spark-on-standalone运行过程)
+  * [不同启动方式下的作业执行流程](#不同启动方式下的作业执行流程)
+    * [Client模式：Driver运行在集群外的客户端上](#client模式driver运行在集群外的客户端上)
+    * [Cluster模式：Driver运行在Worker上](#cluster模式driver运行在worker上)
+* [基于YARN的Spark](#基于yarn的spark)
+  * [客户端模式 yarn-client：驱动器进程是在集群之外客户端运行](#客户端模式-yarn-client驱动器进程是在集群之外客户端运行)
+  * [集群模式 yarn-cluster：驱动器进程是在集群上工作节点运行](#集群模式-yarn-cluster驱动器进程是在集群上工作节点运行)
+  * [Spark:Yarn-cluster和Yarn-client区别与联系](#sparkyarn-cluster和yarn-client区别与联系)
+* [Driver向Master注册Application过程](#driver向master注册application过程)
+* [Driver的任务提交过程](#driver的任务提交过程)
+* [参考文献](#参考文献)
 
 Spark集群在设计的时候，并没有在资源管理的设计上对外封闭，而是充分考虑了未来对接一些更强大的资源管理系统，如YARN、Mesos等，所以Spark架构设计将资源管理单独抽象出一层，通过这种抽象能够构建一种适合企业当前技术栈的插件式资源管理模块，从而为不同的计算场景提供不同的资源分配与调度策略。Spark集群模式架构，如下图所示：   
 ![Spark集群模式架构](https://raw.githubusercontent.com/Andr-Robot/iMarkdownPhotos/master/Res/spark-cluster-overview.png)   

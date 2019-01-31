@@ -1,4 +1,14 @@
-[toc]
+* [MapReduce Shuffle过程](#mapreduce-shuffle过程)
+* [Spark Shuffle过程](#spark-shuffle过程)
+    * [触发Shuffle的操作](#触发shuffle的操作)
+    * [Spark Shuffle](#spark-shuffle)
+    * [Shuffle Write](#shuffle-write)
+        * [解决缺陷一](#解决缺陷一)
+        * [解决缺陷二](#解决缺陷二)
+    * [Shuffle Fetch and Aggregator](#shuffle-fetch-and-aggregator)
+        * [aggregator](#aggregator)
+* [Spark shuffle和Hadoop shuffle的区别](#spark-shuffle和hadoop-shuffle的区别)
+* [参考文献](#参考文献)
 
 **Shuffle 过程本质上都是将 Map 端获得的数据使用分区器进行划分，并将数据发送给对应的 Reducer 的过程。**
 
