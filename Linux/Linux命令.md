@@ -5,7 +5,7 @@
 * [sort](#sort)
 * [head](#head)
 * [创建文件的命令](#创建文件的命令)
-    * [vi/vim](#vi/vim)
+    * [vi/vim](#vivim)
     * [gedit](#gedit)
     * [touch](#touch)
     * [cat](#cat)
