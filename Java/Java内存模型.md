@@ -38,7 +38,7 @@ Java内存模型的主要目标是定义程序中各个变量的访问规则，�
 ## 内存间交互操作
 Java 内存模型定义了 8 个操作来完成主内存和工作内存的交互操作。虚拟机实现时必须保证每种操作都是**原子的，不可再分的**（对于long和double类型存在例外）。
 
-![](https://raw.githubusercontent.com/CyC2018/CS-Notes/master/pics/536c6dfd-305a-4b95-b12c-28ca5e8aa043.png)
+![](https://raw.githubusercontent.com/Andr-Robot/iMarkdownPhotos/master/Res/java%E5%86%85%E5%AD%98%E9%97%B4%E4%BA%A4%E4%BA%92%E6%93%8D%E4%BD%9C.png)
 
 1. 作用于主内存：
     1. **lock**（锁定）：作用于主内存的变量，它把一个变量标识为一条线程独占的状态。
