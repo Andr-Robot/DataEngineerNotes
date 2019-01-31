@@ -1,6 +1,29 @@
-[toc] 
+* [存储引擎](#存储引擎)
+    * [数据库引擎](#数据库引擎)
+    * [InnoDB](#innodb)
+    * [MyISAM](#myisam)
+    * [比较](#比较)
+    * [选择](#选择)
+* [索引](#索引)
+    * [索引实现类型](#索引实现类型)
+    * [MySQL中MyIASM和Innodb的B+ 树索引](#mysql中myiasm和innodb的b-树索引)
+    * [MySQL索引分类](#mysql索引分类)
+    * [索引使用原则](#索引使用原则)
+        * [列独立](#列独立)
+        * [左前缀](#左前缀)
+        * [复合索引由左到右生效](#复合索引由左到右生效)
+        * [不要滥用索引，多余的索引会降低读写性能](#不要滥用索引多余的索引会降低读写性能)
+    * [索引选择原则](#索引选择原则)
+    * [索引的优缺点](#索引的优缺点)
+* [MySQL复制](#mysql复制)
+    * [MySQL复制的原理](#mysql复制的原理)
+* [MySQL读写分离](#mysql读写分离)
+* [MySQL中SQL执行顺序](#mysql中sql执行顺序)
+* [总结](#总结)
+    * [OLTP(联机事务处理)系统和OLAP(联机分析处理)系统的区别](#oltp联机事务处理系统和olap联机分析处理系统的区别)
+* [参考文献](#参考文献)
 
-参见[Interview-Notebook——MySQL](https://github.com/CyC2018/Interview-Notebook/blob/master/notes/MySQL.md)
+参见[Interview-Notebook——MySQL](https://github.com/CyC2018/CS-Notes/blob/master/docs/notes/MySQL.md)
 
 # 存储引擎
 ## 数据库引擎

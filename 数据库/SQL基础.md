@@ -1,6 +1,15 @@
-[toc]
+* [对数据库操作](#对数据库操作)
+* [对表操作](#对表操作)
+* [约束(constraint)详解](#约束constraint详解)
+* [内连接、外连接和半连接](#内连接外连接和半连接)
+    * [内连接](#内连接)
+    * [外连接](#外连接)
+    * [半连接](#半连接)
+* [Limit子句](#limit子句)
+* [总结](#总结)
+    * [mysql中insert into和replace into以及insert ignore用法区别](#mysql中insert-into和replace-into以及insert-ignore用法区别)
 
-参见[Interview-Notebook——SQL](https://github.com/CyC2018/Interview-Notebook/blob/master/notes/SQL.md)
+参见[Interview-Notebook——SQL](https://github.com/CyC2018/CS-Notes/blob/master/docs/notes/SQL.md)
 
 # 对数据库操作
 - **查看当前数据库服务器上的数据库**：show databases
@@ -80,7 +89,7 @@ ALTER TABLE Persons DROP PRIMARY KEY
 - **隐式内连接**：`select * from a,b where a.id=b.id`
 - **显示内连接**：`select * from a inner join b on a.id=b.id`
 
-## 外连接：
+## 外连接
 外联接可以是**左向外联接、右向外联接或完整外部联接**。
 - **左链接**：以左表为参照,显示所有数据;    
 `select * from a left join b on a.id=b.id`
