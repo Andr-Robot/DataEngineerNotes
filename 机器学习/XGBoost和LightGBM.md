@@ -1,4 +1,11 @@
-[toc]
+* [XGBoost](#xgboost)
+* [LightGBM](#lightgbm)
+    * [Histogram算法](#histogram算法)
+    * [带深度限制的Leaf-wise的叶子生长策略](#带深度限制的leaf-wise的叶子生长策略)
+* [总结](#总结)
+    * [GBDT和XGBoost的区别](#gbdt和xgboost的区别)
+    * [集成学习家谱关系图](#集成学习家谱关系图)
+* [参考文献](#参考文献)
 
 # XGBoost
 XGBoost 的目标函数由损失函数和复杂度组成。复杂度又由叶子数量和 L2 正则组成。

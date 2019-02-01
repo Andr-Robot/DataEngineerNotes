@@ -1,4 +1,8 @@
-[toc]
+* [HTTP是什么](#http是什么)
+* [HTTP特性](#http特性)
+* [HTTP请求报文](#http请求报文)
+* [HTTP响应报文](#http响应报文)
+* [参考文献](#参考文献)
 
 # HTTP是什么
 HTTP协议是Hyper Text Transfer Protocol（超文本传输协议）的缩写,是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议。

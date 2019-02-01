@@ -1,4 +1,8 @@
-[toc]
+* [TCP特性](#tcp特性)
+* [UDP 简介](#udp-简介)
+* [TCP和UDP的区别](#tcp和udp的区别)
+* [TCP三次握手与四次挥手](#tcp三次握手与四次挥手)
+* [参考文献](#参考文献)
 
 运行在TCP协议上的协议：HTTP、HTTPS、FTP、POP3、SMTP、TELNET、SSH   
 运行在UDP协议上的协议：DHCP、NTP   
@@ -17,7 +21,7 @@ UDP 是一个简单的传输层协议。和 TCP 相比，UDP 有下面几个显�
 3. **UDP 是无连接的**。UDP 客户和服务器之前不必存在长期的关系。UDP 发送数据报之前也不需要经过握手创建连接的过程。
 4. **UDP 支持多播和广播**。
 
-# TCP和UDP的区别。
+# TCP和UDP的区别
 **TCP和UDP都是传输层中的协议。**
 
 1. **TCP（Transmission Control Protocol，传输控制协议）是面向连接的协议**，也就是说，应用程序在使用 TCP协议之前，必须先建立起一个 TCP连接，之后才能进行通信活动（连接：三次握手；断开：四次挥手）。**UDP（User Data Protocol，用户数据报协议）是面向无连接的协议**，不需要建立和断开连接，发送端可以在任何时候自由地发送数据。
