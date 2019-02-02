@@ -59,7 +59,7 @@
 - [Java容器](https://github.com/Andr-Robot/DataEngineerNotes/blob/master/Java/Java容器.md)
 - [Java线程面试题 Top 50](https://github.com/Andr-Robot/DataEngineerNotes/blob/master/Java/Java%E7%BA%BF%E7%A8%8B%E9%9D%A2%E8%AF%95%E9%A2%98%20Top%2050.md)
 - [Java静态代码块、构造代码块、构造函数以及Java类初始化顺序](https://github.com/Andr-Robot/DataEngineerNotes/blob/master/Java/Java%E9%9D%99%E6%80%81%E4%BB%A3%E7%A0%81%E5%9D%97%E3%80%81%E6%9E%84%E9%80%A0%E4%BB%A3%E7%A0%81%E5%9D%97%E3%80%81%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E4%BB%A5%E5%8F%8AJava%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%BA%E5%BA%8F.md)
-- [Java面试题总结](https://github.com/Andr-Robot/DataEngineerNotes/blob/master/Hive/Java面试题总结.md)
+- [Java面试题总结](https://github.com/Andr-Robot/DataEngineerNotes/blob/master/Java/Java面试题总结.md)
 
 ## Java设计模式
 - [设计模式的七大设计原则和三大分类](https://github.com/Andr-Robot/DataEngineerNotes/blob/master/Java设计模式/设计模式的七大设计原则和三大分类.md)
