@@ -149,3 +149,12 @@
 - [TCP和UDP](https://github.com/Andr-Robot/DataEngineerNotes/blob/master/计算机网络/TCP和UDP.md)
 - [计算机网络基础](https://github.com/Andr-Robot/DataEngineerNotes/blob/master/计算机网络/计算机网络基础.md)
 - [面试题总结](https://github.com/Andr-Robot/DataEngineerNotes/blob/master/计算机网络/面试题总结.md)
+
+# 推荐
+再推荐几个面试知识总结的很不错的页面，仅供参考。
+- [CyC2018——技术面试必备基础知识](https://github.com/CyC2018/CS-Notes)
+- [it-interview——2018互联网求职面试知识复习](https://github.com/it-interview/EasyJob)
+- [geekcompany——程序员简历模板系列](https://github.com/geekcompany/ResumeSample)
+- [jwasham——Coding Interview University](https://github.com/jwasham/coding-interview-university/blob/master/translations/README-cn.md)
+- [crossoverJie——Java Core Sprout : basic, concurrent, algorithm](https://github.com/crossoverJie/JCSprout)
+
