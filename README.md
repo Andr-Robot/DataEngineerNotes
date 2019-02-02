@@ -1,5 +1,6 @@
 # DataEngineerNotes
 2019秋招数据类复习总结
+**注:项目还在勘误阶段，内容仅供参考。**
 
 ## HBase
 - [HBase BlockCache](https://github.com/Andr-Robot/DataEngineerNotes/blob/master/HBase/HBase%20BlockCache.md)
