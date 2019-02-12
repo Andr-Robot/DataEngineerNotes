@@ -36,6 +36,7 @@ HBase对一个region切分，有几个条件：
 2. 如果非用户请求，并且这个region中任意store含有引用文件，则不切分
 3. 如果不是用户请求，也没有引用文件，则判断每个store的大小，只要其中有一个大于阀值，则切分。这个阀值在上面已经有说到。
 
+关于region切分的实现源码如下所示：     
 [IncreasingToUpperBoundRegionSplitPolicy.java](https://github.com/apache/hbase/blob/master/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/IncreasingToUpperBoundRegionSplitPolicy.java)
 
 ```java
@@ -94,7 +95,7 @@ region切分策略会触发region切分，切分开始之后的第一件事是�
 > 整个region中**最大store中的最大文件中最中心的一个block的首个rowkey**。如果定位到的rowkey是整个文件的首个rowkey或者最后一个rowkey的话，就认为没有切分点。
 
 # Region核心切分流程
-HBase将整个切分过程包装成了一个事务，意图能够保证切分事务的原子性。整个分裂事务过程分为三个阶段：prepare – execute – (rollback) 。
+HBase将整个切分过程包装成了一个事务，意图能够保证切分事务的原子性。整个分裂事务过程分为三个阶段：prepare → execute → (rollback) 。
 
 ## prepare阶段
 在内存中初始化两个子region，具体是生成两个HRegionInfo对象，包含tableName、regionName、startkey、endkey等。同时会生成一个transaction journal（日志），这个对象用来记录切分的进展，具体见rollback阶段。
@@ -136,7 +137,7 @@ reference文件是一个引用文件，文件内容主要有两部分构成：
 2. 是一个boolean类型的变量（true或者false），true表示该reference文件引用的是父文件的上半部分（top），而false表示引用的是下半部分 （bottom）。
 
 # 总结
-整个region**切分过程并没有涉及数据的移动**，所以切分成本本身并不是很高，可以很快完成。**切分后子region的文件实际没有任何用户数据，文件中存储的仅是一些元数据信息－切分点rowkey等**。
+整个region**切分过程并没有涉及数据的移动**，所以切分成本本身并不是很高，可以很快完成。**切分后子region的文件实际没有任何用户数据，文件中存储的仅是一些元数据信息和切分点rowkey等**。
 
 ## 通过reference文件如何查找数据？
 整个流程如下图所示：

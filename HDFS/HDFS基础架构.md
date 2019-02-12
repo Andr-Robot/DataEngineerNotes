@@ -101,17 +101,17 @@ Hadoop NameNode 管理着文件系统的 **Namespace**，它维护着整个**文
 
 ![namenode操作](https://raw.githubusercontent.com/Andr-Robot/iMarkdownPhotos/master/Res/namenode.png)
 
-NameNode Metadata 主要是两个文件：`Edit log`  和 `fs\_image` 。
-- `fs\_image`：它是在NameNode启动时对整个文件系统的快照，是 HDFS 的最新状态（截止到 `fs\_image` 文件创建时间的最新状态）文件；
-- `Edit log`：是自 `fs\_image` 创建后的 Namespace 操作日志。
+NameNode Metadata 主要是两个文件：`Edit log`  和 `fs_image` 。
+- `fs_image`：它是在NameNode启动时对整个文件系统的快照，是 HDFS 的最新状态（截止到 `fs_image` 文件创建时间的最新状态）文件；
+- `Edit log`：是自 `fs_image` 创建后的 Namespace 操作日志。
 
-NameNode 每次启动的时候，才会合并两个文件，按照 `Edit log` 的记录，把 `fs\_image` 文件更新到最新，从而得到一个文件系统的最新快照。这也意味着当NameNode运行了很长时间后，`Edit log`文件会变得很大。在这种情况下就会出现下面一些问题：
+NameNode 每次启动的时候，才会合并两个文件，按照 `Edit log` 的记录，把 `fs_image` 文件更新到最新，从而得到一个文件系统的最新快照。这也意味着当NameNode运行了很长时间后，`Edit log`文件会变得很大。在这种情况下就会出现下面一些问题：
 - edit logs文件会变的很大，怎么去管理这个文件是一个挑战。
-- NameNode的重启会花费很长时间，因为在`Edit log`中有很多改动要合并到`fs\_image`文件上。
+- NameNode的重启会花费很长时间，因为在`Edit log`中有很多改动要合并到`fs_image`文件上。
 - 如果NameNode挂掉了，那我们就丢失了部分改动记录。（在这个情况下丢失的改动不会很多, 因为丢失的改动应该是还在内存中但是没有写到edit logs的这部分）
 
 ## Secondary NameNode
-SecondaryNameNode就是来帮助解决上述问题的，它的职责是合并NameNode的`Edit log`到`fs\_image`文件中。   
+SecondaryNameNode就是来帮助解决上述问题的，它的职责是合并NameNode的`Edit log`到`fs_image`文件中。   
 
 ![secondarynamenode](https://raw.githubusercontent.com/Andr-Robot/iMarkdownPhotos/master/Res/secondarynamenode.png)
 

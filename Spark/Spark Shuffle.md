@@ -71,7 +71,7 @@ ShuffleMapTask 的执行过程很简单：
 在一个 core 上连续执行的 ShuffleMapTasks 可以共用一个输出文件 ShuffleFile。先执行完的
 ShuffleMapTask 形成 `ShuffleBlock i`，后执行的 ShuffleMapTask 可以将输出数据直接追加到 `ShuffleBlock i` 后面，形成
 `ShuffleBlock i'`，每个 ShuffleBlock 被称为 **FileSegment**。下一个 stage 的 reducer 只需要 fetch 整个 ShuffleFile 就行
-了。这样，每个 worker 持有的文件数降为 `$cores \cdot R$`。FileConsolidation 功能可以通
+了。这样，每个 worker 持有的文件数降为 `cores * R`。FileConsolidation 功能可以通
 过 `spark.shuffle.consolidateFiles=true`来开启。
 
 ## Shuffle Fetch and Aggregator

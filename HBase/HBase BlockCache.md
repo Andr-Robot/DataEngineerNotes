@@ -10,8 +10,8 @@
 ![缓存结构](https://raw.githubusercontent.com/Andr-Robot/iMarkdownPhotos/master/Res/HBaseBlockCache.png)
 
 HBase在实现中提供了两种缓存结构：**MemStore**和**BlockCache**。
-- **MemStore称为写缓存**，HBase执行写操作首先顺序写入HLog，然后将数据写入MemStore，等满足一定条件后统一将MemStore中数据刷新到磁盘，这种设计可以极大地提升HBase的写性能。不仅如此，MemStore对于读性能也至关重要，假如没有MemStore，读取刚写入的数据就需要从文件中通过IO查找。
-- **BlockCache称为读缓存**，读请求先到Memstore中查数据，查不到就到BlockCache中查，再查不到就会到磁盘上读，HBase会将查找到的结果缓存到BlockCache，以便后续同一请求或者邻近数据查找请求，可以直接从内存中获取，避免昂贵的IO操作。
+- **MemStore称为写缓存**，HBase执行写操作首先顺序写入HLog，然后将数据写入MemStore，等满足一定条件后统一将MemStore中数据刷新到磁盘，这种设计可以极大地提升HBase的写性能。不仅如此，MemStore对于读性能也至关重要，假如没有MemStore，读取刚写入的数据就需要从文件中通过I/O查找。
+- **BlockCache称为读缓存**，读请求先到Memstore中查数据，查不到就到BlockCache中查，再查不到就会到磁盘上读，HBase会将查找到的结果缓存到BlockCache，以便后续同一请求或者邻近数据查找请求，可以直接从内存中获取，避免昂贵的I/O操作。
 
 **一个Regionserver上有一个BlockCache和N个Memstore**，它们的大小之和不能大于等于`heapsize * 0.8`，否则HBase不能正常启动。
 
@@ -33,6 +33,6 @@ BlockCache是Region Server级别的，**一个Region Server只有一个Block Cac
 
 
 # 参考文献
-[HBase BlockCache系列 – 走进BlockCache](http://hbasefly.com/2016/04/08/hbase-blockcache-1/)     
+[HBase BlockCache系列 － 走进BlockCache](http://hbasefly.com/2016/04/08/hbase-blockcache-1/)     
 [HBase BlockCache系列 － 探求BlockCache实现机制](http://hbasefly.com/2016/04/26/hbase-blockcache-2/)    
 [HBase BlockCache系列 － 性能对比测试报告](http://hbasefly.com/2016/05/06/hbase-blockcache-3/)     
