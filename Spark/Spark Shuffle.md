@@ -32,7 +32,7 @@ join相关 | cogroup、join
 
 ![shuffle过程](https://raw.githubusercontent.com/Andr-Robot/iMarkdownPhotos/master/Res/spark-shuffle.png)    
 
-1. 首先每一个Mapper会根据Reducer的数量创建出相应的**bucket**，bucket的数量是`$M\cdot R$`，其中`$M$`是Map的个数，`$R$`是Reduce的个数。   
+1. 首先每一个Mapper会根据Reducer的数量创建出相应的**bucket**，bucket的数量是`M * R`，其中`M`是Map的个数，`R`是Reduce的个数。   
 2. 其次Mapper产生的结果会根据设置的**partition算法**填充到每个bucket中去。这里的partition算法是可以自定义的，当然默认的算法是**根据key哈希到不同的bucket中去**。
 3. 当Reducer启动时，它会根据自己task的id和所依赖的Mapper的id**从远端或是本地**的block manager中取得相应的bucket作为Reducer的输入进行处理。
 
@@ -48,7 +48,7 @@ shuffle write 的任务很简单，实现也很简单：将 shuffle write 的处
 ![shuffle write v1](https://raw.githubusercontent.com/Andr-Robot/iMarkdownPhotos/master/Res/shuffle-write-no-consolidation.png)     
 
 上图有 4 个 ShuffleMapTask 要在同一个 worker node 上运行，CPU core 数为 2，可以同时运行两个 task。每个 task 的
-执行结果（该 stage 的 finalRDD 中某个 partition 包含的 records）被逐一写到本地磁盘上。每个 task 包含 `$R$` 个缓冲区，R=reducer 个数（也就是下一个 stage 中 task 的个数），缓冲区被称为 **bucket**，其大小
+执行结果（该 stage 的 finalRDD 中某个 partition 包含的 records）被逐一写到本地磁盘上。每个 task 包含 `R` 个缓冲区，R=reducer 个数（也就是下一个 stage 中 task 的个数），缓冲区被称为 **bucket**，其大小
 为 `spark.shuffle.file.buffer.kb` ，**默认是 100KB**。    
 
 ShuffleMapTask 的执行过程很简单：
