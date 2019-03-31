@@ -17,19 +17,23 @@ Obj(\Theta)=\sum\limits_il(y_i, \hat y_i)+\sum\limits_k\Omega(f_k)
 
 \Omega(f)=\gamma T+\dfrac{1}{2}\lambda||w||^2
 ```
--->
+-->      
 
-<img src="https://latex.codecogs.com/png.latex?Obj(\Theta)=\sum\limits_il(y_i,&space;\hat&space;y_i)&plus;\sum\limits_k\Omega(f_k)&space;\Omega(f)=\gamma&space;T&plus;\dfrac{1}{2}\lambda||w||^2" title="Obj(\Theta)=\sum\limits_il(y_i, \hat y_i)+\sum\limits_k\Omega(f_k) \Omega(f)=\gamma T+\dfrac{1}{2}\lambda||w||^2" />
+<img src="https://latex.codecogs.com/png.latex?Obj(\Theta)=\sum\limits_il(y_i,&space;\hat&space;y_i)&plus;\sum\limits_k\Omega(f_k)" title="Obj(\Theta)=\sum\limits_il(y_i, \hat y_i)+\sum\limits_k\Omega(f_k)" />        
+
+<img src="https://latex.codecogs.com/png.latex?\Omega(f)=\gamma&space;T&plus;\dfrac{1}{2}\lambda||w||^2" title="\Omega(f)=\gamma T+\dfrac{1}{2}\lambda||w||^2" />
 
 其中`i`是样本id，`k`是树id（轮数），`T`是叶子结点的总数，由于loss函数和复杂度项都是凸函数，所以有最小值。`w`是给定了某个输入对应每个叶子结点分数是什么，将`w`的<img src="https://latex.codecogs.com/png.latex?\inline&space;L_2" title="L_2" /><!--`$L_2$`-->正则项加在目标函数中，可以有效的防止过拟合。叶子节点的数目也作为正则项加在了目标函数中，一定程度上限制了叶子数量，防止过拟合。而传统GBDT防止过拟合的手段是预剪枝或者后剪枝。
 
 XGBoost的具体推导过程参见[XGBoost 与 Boosted Tree](http://www.52cs.org/?p=429)和[XGBoost 介绍](http://pengshuang.space/2017/03/15/XGBoost-%E4%BB%8B%E7%BB%8D/)。   
 XGBoost的步骤：
+
 1. 对loss function进行二阶Taylor Expansion，展开以后的形式里，当前待学习的Tree是变量，需要进行优化求解。
 2. Tree的优化过程，包括两个环节：
     - 枚举每个叶结点上的特征潜在的分裂点
     - 对每个潜在的分裂点，计算如果以这个分裂点对叶结点进行分割以后，分割前和分割后的loss function的变化情况。
     
+
 因为Loss Function满足累积性，并且每个叶结点对应的weight的求取是独立于其他叶结点的（只跟落在这个叶结点上的样本有关），所以，不同叶结点上的loss function满足单调累加性，只要保证每个叶结点上的样本累积loss function最小化，整体样本集的loss function也就最小化了。   
 
 XGBoost对GBDT的**改进**：
